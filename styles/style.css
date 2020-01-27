@@ -1,0 +1,405 @@
+body {
+  background-color: #9aadaf;
+}
+
+p.message_center_text {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+
+p.hidden {
+  display: none;
+}
+
+.game span.prevard img {
+  border: 2px solid black;
+  margin-top: 30px;
+}
+
+.game span.card {
+  position: absolute;
+  left: 48%;
+  top: 16%;
+}
+
+.game span.card img {
+  border: 2px solid black;
+}
+
+.game div.buttons {
+  margin-top: 5rem;
+  margin-left: 42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game div.buttons button {
+  padding: 10px;
+}
+
+.game div.buttons div.suits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game div.buttons div.suits button {
+  height: 3rem;
+}
+
+div.money {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  height: 50px;
+}
+
+div.money div.my-bank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.money div.my-bank p {
+  padding: 0rem .5rem 0 .5rem;
+}
+
+div.money div.my-bank button {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: none;
+}
+
+div.money div.my-bank p.bank-coins {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 14px;
+}
+
+div.money div.my-bank button.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #07d307;
+  font-weight: 700;
+  border: none;
+}
+
+div.money div.my-bet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.money div.my-bet p {
+  padding: 0rem .5rem 0 .5rem;
+}
+
+div.money div.my-bet p.bet-coins {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 14px;
+}
+
+div.money div.my-bet button {
+  padding: 8px;
+  margin: .5rem;
+}
+
+.paytable table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.paytable table thead {
+  border: 1px solid black;
+}
+
+.paytable table td {
+  border: 1px solid black;
+}
+
+.paytable table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.paytable table tr.highlight {
+  background-color: rgba(255, 0, 0, 0.3);
+  font-weight: 800;
+}
+
+.xgamble {
+  height: 90%;
+  width: 97.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 10rem;
+  padding-left: 3rem;
+  text-align: center;
+}
+
+.xgamble div.final_text p.final_text_text {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+}
+
+.xgamble h1 {
+  margin-top: 2rem;
+  color: white;
+}
+
+.xgamble h2.greenCards {
+  margin: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.xgamble h2.greenCards p {
+  margin: 0 .5rem;
+  color: #14db14;
+}
+
+.xgamble div.gambleCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+.xgamble div.gambleCards span {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 2rem;
+  border: 1px solid black;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.xgamble div.gambleCards span.unknown {
+  background-color: #ff009d;
+}
+
+.xgamble div.gambleCards span.unknown:hover {
+  background-color: orange;
+}
+
+.xgamble div.gambleCards span.true {
+  background-color: #16f10e;
+}
+
+.xgamble div.gambleCards span.false {
+  background-color: #f51a1a;
+}
+
+.xgamble div.backButton button.displayBack {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+  border: 1px solid black;
+}
+
+.xgamble div.backButton button.displayBack:hover {
+  background-color: black;
+  color: white;
+}
+
+.display {
+  display: none;
+}
+
+.displayAfter {
+  display: none;
+}
+
+.xgambleAfter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+.xgambleAfter span {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 2rem;
+  border: 1px solid black;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.xgambleAfter span.unknown {
+  background-color: #ff009d;
+}
+
+.xgambleAfter span.unknown:hover {
+  background-color: orange;
+}
+
+.xgambleAfter span.true {
+  background-color: #16f10e;
+}
+
+.xgambleAfter span.false {
+  background-color: #f51a1a;
+}
+
+.xstart-money {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.xstart-money h1 {
+  color: white;
+}
+
+.xstart-money div.money-buttons {
+  margin-top: 7rem;
+}
+
+.xstart-money div.money-buttons button {
+  padding: .8rem 2rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.xstart-money div.money-buttons button.choosen {
+  background-color: #10d610;
+}
+
+.xstart-money div.start-game {
+  margin-top: 2rem;
+}
+
+.xstart-money div.start-game button {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.xstart-money ul {
+  list-style: none;
+}
+
+.finish_table {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.finish_table .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15rem;
+}
+
+.finish_table .table ul {
+  list-style-type: none;
+}
+
+.finish_table .table ul li {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.finish_table .table ul li p {
+  margin: 0;
+  padding-left: 1rem;
+  color: #6af110;
+}
+
+.finish_table .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.finish_table .buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.winOn {
+  height: 15rem;
+  width: 12rem;
+  border: 2px solid red;
+  margin-bottom: 3rem;
+  background-color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.winOnWin {
+  -webkit-box-shadow: 0px 0px 10px 5px #2bff00;
+          box-shadow: 0px 0px 10px 5px #2bff00;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.winOnLoss {
+  -webkit-box-shadow: 0px 0px 10px 5px red;
+          box-shadow: 0px 0px 10px 5px red;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.winOnTie {
+  -webkit-box-shadow: 0px 0px 10px 5px #001aff;
+          box-shadow: 0px 0px 10px 5px #001aff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+/*# sourceMappingURL=style.css.map */

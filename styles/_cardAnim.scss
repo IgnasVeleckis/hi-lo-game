@@ -1,0 +1,23 @@
+.winOn {
+    height: 15rem;
+    width: 12rem;
+    border: 2px solid red;
+    margin-bottom: 3rem;
+    background-color: white;
+    transition: 1s;
+}
+
+.winOnWin {
+    box-shadow: 0px 0px 10px 5px rgba(43, 255, 0, 1);
+    transition: .2s;
+}
+
+.winOnLoss {
+    box-shadow: 0px 0px 10px 5px rgb(255, 0, 0);
+    transition: .2s;
+}
+
+.winOnTie {
+    box-shadow: 0px 0px 10px 5px rgb(0, 26, 255);
+    transition: .2s;
+}

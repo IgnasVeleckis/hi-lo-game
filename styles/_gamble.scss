@@ -1,0 +1,103 @@
+.xgamble {
+    height: 90%;
+    width: 97.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10rem;
+    padding-left: 3rem;
+    text-align: center;
+    div.final_text {
+        p.final_text_text {
+            font-size: 2rem;
+            color: white;
+            font-weight: 600;
+        }
+    }
+    h1 {
+        margin-top: 2rem;
+        color: white;
+    }
+    h2.greenCards {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: white;
+        p {
+            margin: 0 .5rem;
+            color: rgb(20, 219, 20);
+        }
+    }
+    div.gambleCards {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        span {
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 2rem;
+            border: 1px solid black;
+            transition: .1s;
+            &.unknown {
+                background-color: rgb(255, 0, 157);
+                &:hover {
+                    background-color: orange;
+                }
+            }
+            &.true {
+                background-color: rgb(22, 241, 14);
+            }
+            &.false {
+                background-color: rgb(245, 26, 26);
+            }
+        }
+    }
+    div.backButton {
+        button.displayBack {
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            margin-top: 3rem;
+            border: 1px solid black;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}
+
+.display {
+    display: none;
+}
+
+.displayAfter {
+    display: none;
+}
+
+.xgambleAfter {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    span {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 2rem;
+        border: 1px solid black;
+        transition: .1s;
+        &.unknown {
+            background-color: rgb(255, 0, 157);
+            &:hover {
+                background-color: orange;
+            }
+        }
+        &.true {
+            background-color: rgb(22, 241, 14);
+        }
+        &.false {
+            background-color: rgb(245, 26, 26);
+        }
+    }
+}

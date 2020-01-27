@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center">Hi - Lo game</h1>
+
+    <div class="display">
+        <h1>Guess one card if its green you get 10</h1>
+        <h2 class="greenCards">You gamble on
+            <p class="leftoversValueOne"></p> euros, so you get
+            <p class="leftoversValue2"></p> green cards
+        </h2>
+        <div class="gambleCards">
+            <span class="unknown" id="card-0"></span>
+            <span class="unknown" id="card-1"></span>
+            <span class="unknown" id="card-2"></span>
+            <span class="unknown" id="card-3"></span>
+            <span class="unknown" id="card-4"></span>
+            <span class="unknown" id="card-5"></span>
+            <span class="unknown" id="card-6"></span>
+            <span class="unknown" id="card-7"></span>
+            <span class="unknown" id="card-8"></span>
+            <span class="unknown" id="card-9"></span>
+        </div>
+        <div class="final_text">
+            <p class="final_text_text"></p>
+        </div>
+        <div class="backButton">
+            <button class="displayBack" onclick="gambleDisplayOff()">Back</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="finish_table hidden">
+        <div class="table">
+            <ul>
+                <li>Starting money:
+                    <p class="finTabStartMon"></p>
+                </li>
+                <li>Maximum money had:
+                    <p class="finTabMaxMon"></p>
+                </li>
+                <li>Highest bet:
+                    <p class="finTabMaxBet"></p>
+                </li>
+                <li>Time reshuffled:
+                    <p class="finTabReshuffle"></p>
+                </li>
+                <li>Times guessed:
+                    <p class="finTabGuess"></p>
+                </li>
+                <li>Max. win:
+                    <p class="finTabMaxWin"></p>
+                </li>
+            </ul>
+            <ul>
+                <li>Times won:
+                    <p class="fintTabTimesWon"></p>
+                </li>
+                <li>Picked higher:
+                    <p class="finTabPickHigh"></p>
+                </li>
+                <li>Picked lower:
+                    <p class="finTabPickLow"></p>
+                </li>
+                <li>Times gambled:
+                    <p class="finTabTimesGamble"></p>
+                </li>
+                <li>Gamble wins(times):
+                    <p class="finTabGambleWinTimes"></p>
+                </li>
+                <li>Gamble wins(money):
+                    <p class="finTabGambleWinMoney"></p>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button onclick="document.location.reload(true)">Play again</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="xstart-money pt-5">
+        <h1>Choose your starting money</h1>
+        <div class="money-buttons">
+            <button onclick="add100()" class="choose100">100</button>
+            <button onclick="add500()" class="choose500">500</button>
+            <button onclick="add1000()" class="choose1000">1000</button>
+            <button onclick="add2000()" class="choose2000">2000</button>
+        </div>
+        <div class="start-game"></div>
+        <h2 class="rules text-danger">Rules:</h2>
+        <ul>
+            <li class="text-danger">This game is played with a full deck of 52 cards</li>
+            <li class="text-danger">The payout depends on the value of the card which is lying on the table. (bet * payout multiplier)</li>
+            <li class="text-danger">A tie pays even money</li>
+            <li class="text-danger">2 and Aces are not accepted as first card because they respectively represent the highest and lowest values in the game
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="game text-center">
+        <span class="prevard" id="1">
+                <img class="prevImage" style='height: 15rem' alt="prev"
+                    src="https://vignette.wikia.nocookie.net/hearthstone/images/c/c4/Card_back-Default.png/revision/latest?cb=20140823204025">
+            </span>
+        <span class="card" id="1">
+                <img class="image" style='height: 15rem' alt="prev"
+                    src="https://vignette.wikia.nocookie.net/hearthstone/images/c/c4/Card_back-Default.png/revision/latest?cb=20140823204025">
+            </span>
+        <div class="buttons">
+
+            <div class="HiLo">
+                <p class="text"></p>
+                <button class="higher" onclick="higher()">Higher</button>
+
+                <p class="winValueHi"></p>
+                <button class="lower" onclick="lower()">Lower</button>
+                <p class="winValueLo"></p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row mx-auto mt-5">
+        <div class="col-5"></div>
+        <div class="col text-center">
+            <div class="money">
+                <div class="my-bank">
+                    <p>BANK:</p>
+                    <p class="bank-coins"></p>
+                    <button class="gamble" onclick="gambleDisplayOn()">gamble</button>
+                </div>
+                <div class="my-bet">
+                    <p>BET:</p>
+                    <p class="bet-coins"></p>
+                    <button class="plus" id="plusBet" onclick="betUp10()">+10</button>
+                    <button class="minus" onclick="betDown10()">-10</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--     <div class="paytable">
+        <table>
+            <tbody>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>CARD</td>
+                        <td>LOWER</td>
+                        <td>HIGHER</td>
+                    </tr>
+                </thead>
+                <tr class="id-0">
+                    <td>0</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="id-1">
+                    <td>1</td>
+                    <td>3</td>
+                    <td>10.7</td>
+                    <td>1.1</td>
+                </tr>
+                <tr class="id-2">
+                    <td>2</td>
+                    <td>4</td>
+                    <td>5.3</td>
+                    <td>1.1</td>
+                </tr>
+                <tr class="id-3">
+                    <td>3</td>
+                    <td>5</td>
+                    <td>3.5</td>
+                    <td>1.1</td>
+                </tr>
+                <tr class="id-4">
+                    <td>4</td>
+                    <td>6</td>
+                    <td>2.6</td>
+                    <td>1.3</td>
+                </tr>
+                <tr class="id-5">
+                    <td>5</td>
+                    <td>7</td>
+                    <td>2.1</td>
+                    <td>1.5</td>
+                </tr>
+                <tr class="id-6">
+                    <td>6</td>
+                    <td>8</td>
+                    <td>1.7</td>
+                    <td>1.7</td>
+                </tr>
+                <tr class="id-7">
+                    <td>7</td>
+                    <td>9</td>
+                    <td>1.5</td>
+                    <td>2.1</td>
+                </tr>
+                <tr class="id-8">
+                    <td>8</td>
+                    <td>10</td>
+                    <td>1.3</td>
+                    <td>2.6</td>
+                </tr>
+                <tr class="id-9">
+                    <td>9</td>
+                    <td>J</td>
+                    <td>1.1</td>
+                    <td>3.5</td>
+                </tr>
+                <tr class="id-10">
+                    <td>10</td>
+                    <td>Q</td>
+                    <td>1.1</td>
+                    <td>5.3</td>
+                </tr>
+                <tr class="id-11">
+                    <td>11</td>
+                    <td>K</td>
+                    <td>1.1</td>
+                    <td>10.7</td>
+                </tr>
+                <tr class="id-12">
+                    <td>12</td>
+                    <td>T</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ -->
+    <p class="hidden">aaa</p>
+
+
+
+
+
+
+
+
+
+    <script src="JS/class.js"></script>
+    <script src="JS/alert.js"></script>
+    <script src="JS/deck.js"></script>
+    <script src="JS/money.js"></script>
+    <script src="JS/cards.js"></script>
+    <script src="JS/gamble.js"></script>
+    <script src="JS/start.js"></script>
+    <script src="JS/finTable.js"></script>
+    <script src="JS/finish.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

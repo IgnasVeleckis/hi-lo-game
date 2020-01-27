@@ -1,0 +1,42 @@
+.finish_table {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    .table {
+        display: flex;
+        justify-content: center;
+        margin-top: 15rem;
+        ul {
+            list-style-type: none;
+            li {
+                color: white;
+                font-weight: 700;
+                font-size: 1.3rem;
+                display: flex;
+                margin-bottom: 1rem;
+                p {
+                    margin: 0;
+                    padding-left: 1rem;
+                    color: rgb(106, 241, 16);
+                }
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,33 @@
+.game {
+    span {
+        &.prevard {
+            img {
+                border: 2px solid black;
+                margin-top: 30px;
+            }
+        }
+        &.card {
+            position: absolute;
+            left: 48%;
+            top: 16%;
+            img {
+                border: 2px solid black;
+            }
+        }
+    }
+    div.buttons {
+        margin-top: 5rem;
+        margin-left: 42%;
+        display: flex;
+        justify-content: space-between;
+        button {
+            padding: 10px;
+        }
+        div.suits {
+            display: flex;
+            button {
+                height: 3rem;
+            }
+        }
+    }
+}

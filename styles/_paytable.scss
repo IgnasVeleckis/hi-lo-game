@@ -1,0 +1,21 @@
+.paytable {
+    table {
+        border: 1px solid black;
+        text-align: center;
+        thead {
+            border: 1px solid black;
+        }
+        td {
+            border: 1px solid black;
+        }
+        tr {
+            &:nth-child(even) {
+                background-color: rgba(black, 0.2);
+            }
+        }
+        tr.highlight {
+            background-color: rgba(red, 0.3);
+            font-weight: 800;
+        }
+    }
+}
