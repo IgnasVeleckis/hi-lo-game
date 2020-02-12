@@ -2,7 +2,7 @@ class Message {
     constructor(text, condition) {
         this.text = text;
         this.condition = condition; // winBank winBet lossBank tie insufficient funds ir tt ir per
-        // if tikrint if(message1.condition === win){atitinkamas text ir color} ir pats bank paryskeja ar dar koki bb sugalvot
+        // if tikrint if(message1.condition === win){atitinkamas text ir color} ir pats bank paryskeja
     }
 }
 
